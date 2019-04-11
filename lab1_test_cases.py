@@ -8,7 +8,7 @@ class TestLab1(unittest.TestCase):
         """This test checks for the value Error in the max_list_iter functinon"""
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
-        max_list_iter(tlist)
+            max_list_iter(tlist)
 
     def test_max_list_iter_none(self):      #used for checking None statement in max_list_iter
         self.assertEqual(max_list_iter([]), None)
@@ -25,6 +25,8 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(reverse_rec([1]), [1])
         self.assertEqual(reverse_rec([5, 7, 3, 9]), [9, 3, 7, 5])
         self.assertEqual(reverse_rec([1, 1]), [1, 1])
+        self.assertEqual(reverse_rec([1, 2, 1]), [1, 2, 1])
+
 
     def test_reverse_rec_none(self):        #used for testing empty reverse_rec list
         self.assertEqual(reverse_rec([]), [])

@@ -21,7 +21,7 @@ def reverse_rec(int_list):
 		raise ValueError
 	elif len(int_list) > 0:
 		x = [int_list[len(int_list) - 1]]
-		int_list.remove(int_list[len(int_list) - 1])
+		del int_list[-1]
 		y = reverse_rec(int_list)
 		return x + y
 	else:
