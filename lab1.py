@@ -17,15 +17,15 @@ def max_list_iter(int_list):
 def reverse_rec(int_list):
 	"""recursively reverses a list of numbers and returns the reversed list
 	If list is none, raises ValueError"""
-    if int_list == None:
-        raise ValueError
-    elif len(int_list) > 0:
-        x = [int_list[len(int_list) - 1]]
-        int_list.remove(int_list[len(int_list) - 1])
-        y = reverse_rec(int_list)
-        return x + y
-    else:
-        return []
+	if int_list == None:
+	    raise ValueError
+	elif len(int_list) > 0:
+	    x = [int_list[len(int_list) - 1]]
+	    int_list.remove(int_list[len(int_list) - 1])
+	    y = reverse_rec(int_list)
+	    return x + y
+	else:
+	    return []
 
 def bin_search(target, low, high, int_list):
 	"""searches for target in int list[low..high] and returns index if found
