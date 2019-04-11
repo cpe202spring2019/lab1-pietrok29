@@ -18,14 +18,14 @@ def reverse_rec(int_list):
 	"""recursively reverses a list of numbers and returns the reversed list
 	If list is none, raises ValueError"""
 	if int_list == None:
-	    raise ValueError
+		raise ValueError
 	elif len(int_list) > 0:
-	    x = [int_list[len(int_list) - 1]]
-	    int_list.remove(int_list[len(int_list) - 1])
-	    y = reverse_rec(int_list)
-	    return x + y
+		x = [int_list[len(int_list) - 1]]
+		int_list.remove(int_list[len(int_list) - 1])
+		y = reverse_rec(int_list)
+		return x + y
 	else:
-	    return []
+		return []
 
 def bin_search(target, low, high, int_list):
 	"""searches for target in int list[low..high] and returns index if found
@@ -38,6 +38,6 @@ def bin_search(target, low, high, int_list):
 	if int_list[spot] == target:
 		return spot
 	if target < int_list[spot]:
-		return bin_search(target, low, spot - 1 , int_list)
+		return bin_search(target, low, spot - 1 , int_list)					#[1, 2, 3, 4, 5, 6]
 	if target > int_list[spot]:
 		return bin_search(target, spot + 1, high, int_list)

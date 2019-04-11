@@ -5,10 +5,10 @@ from lab1 import *
 class TestLab1(unittest.TestCase):
 
     def test_max_list_iter(self):
-        """add description here"""
+        """This test checks for the value Error in the max_list_iter functinon"""
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
-            max_list_iter(tlist)
+        max_list_iter(tlist)
 
     def test_max_list_iter_none(self):      #used for checking None statement in max_list_iter
         self.assertEqual(max_list_iter([]), None)
@@ -51,7 +51,7 @@ class TestLab1(unittest.TestCase):
     def test_bin_search_none(self):         #used for checking the None statement in bin_search
         self.assertEqual(bin_search(10, 0, 5, [1, 2, 3, 4, 5, 6]), None)
         self.assertEqual(bin_search(2, 0, 0, [1]), None)
-        self.assertEqual(bin_search(2, 0, 0, [1, 6]), None)
+        self.assertEqual(bin_search(2, 0, 1, [1, 6]), None)
         self.assertEqual(bin_search(2, 0, 0, []), None)
 
     def test_bin_search_error(self):        #used for checking the raise valueerror in bin_search
